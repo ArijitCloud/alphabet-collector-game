@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import GamePanel from "./components/GamePanel/GamePanel";
+import ScorePanel from "./components/ScorePanel/ScorePanel";
+import GameItems from "./mocks/GameItems";
+import useItemScore from "./useItemScore";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const onCollect = (item: GameItem) => {
+  // };
+
+  // const onNewGame = () => {};
+  const { allItems, totalScore, updateScore, resetScore } =
+    useItemScore(GameItems);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="main-container">
+      <GamePanel
+        items={allItems}
+        onCollect={(item) => updateScore(item.label)}
+      ></GamePanel>
+      <ScorePanel
+        items={allItems}
+        score={totalScore}
+        onNewGame={resetScore}
+      ></ScorePanel>
+    </div>
+  );
 }
 
-export default App
+export default App;
