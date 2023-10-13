@@ -1,6 +1,12 @@
 .score-container {
+  display: none;
   flex: 1 1 30%;
   border-left: var(--border-style);
+}
+
+.score-container.open{
+  display: flex;
+  flex-direction: column;
 }
 
 .score-header {
@@ -8,12 +14,11 @@
 }
 
 .score-footer {
-  max-height: 10vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: 0.5rem;
-  font-size: var(--score-font-size);
+  font-size: var(--score-small-font-size);
   border-top: var(--border-style);
 }
 
@@ -21,4 +26,14 @@
   grid-column: span 2;
   width: 80%;
   justify-self: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .score-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .score-footer {
+    font-size: var(--score-big-font-size);
+  }
 }

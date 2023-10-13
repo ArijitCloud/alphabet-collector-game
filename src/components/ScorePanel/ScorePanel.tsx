@@ -12,15 +12,18 @@ interface ScorePanelProps {
   readonly score: Score;
   readonly headerText?: string;
   readonly onNewGame: () => void;
+  isOpen: boolean;
 }
 const ScorePanel = ({
   items,
   score,
   headerText,
+  isOpen,
   onNewGame,
 }: ScorePanelProps) => {
+  console.log(isOpen);
   return (
-    <div className="score-container">
+    <div className={`score-container ${isOpen?"open":""}`}>
       <div className="score-header">
         <h2>{headerText || ScorePanelDefaultHeading}</h2>
       </div>
