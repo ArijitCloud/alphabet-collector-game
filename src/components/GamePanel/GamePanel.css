@@ -9,15 +9,25 @@
 .panel-items {
   display: flex;
   flex-flow: row wrap;
+  align-content: flex-start;
   gap: 2rem;
-  justify-content: center;
-  padding-top: 2rem;
-  min-height: 85vh;
+  padding: 1.5rem;
+  flex-grow: 1;
   overflow-y: scroll;
 }
 
 .panel-items button {
   width: 8rem;
   height: 8rem;
-  font-size: xx-large;
+  font-size: 3em;
+  justify-content: center;
+  display: flex;
+}
+
+@media only screen and (min-width: 800px) {
+  .panel-items button {
+    width: 10rem;
+    height: 10rem;
+    font-size: 4em;
+  }
 }
