@@ -1,3 +1,4 @@
+import { GamePanelDefaultHeading } from "../../common/sharedStrings";
 import { GameItem } from "../../types";
 import "./GamePanel.css";
 
@@ -18,13 +19,12 @@ const GamePanel = ({
   return (
     <div className="panel-container">
       <div className="panel-header">
-        <h3>{headerText || "Collect Alphabets"}</h3>
+        <h2>{headerText || GamePanelDefaultHeading}</h2>
       </div>
       <div className="panel-items">
         {items?.map((item, index) => {
           return (
-            <button
-              className="main-clicker"
+            <button type="button"
               key={index}
               onClick={(e) =>
                 onItemClick((e.target as HTMLButtonElement).innerText)

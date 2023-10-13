@@ -1,3 +1,24 @@
-.score-container{
-    flex: 1 1 25%;
+.score-container {
+  flex: 1 1 30%;
+  border-left: var(--border-style);
+}
+
+.score-header {
+  border-bottom: var(--border-style);
+}
+
+.score-footer {
+  max-height: 10vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0.5rem;
+  font-size: var(--score-font-size);
+  border-top: var(--border-style);
+}
+
+.score-footer button {
+  grid-column: span 2;
+  width: 80%;
+  justify-self: center;
 }

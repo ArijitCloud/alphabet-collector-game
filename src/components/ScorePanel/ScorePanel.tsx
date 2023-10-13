@@ -1,4 +1,10 @@
+import {
+  ScoreBonusLabel,
+  ScorePanelDefaultHeading,
+  ScoreTotalLabel,
+} from "../../common/sharedStrings";
 import { GameItem, Score } from "../../types";
+import ScoreDetailView from "../ScoreDetailView/ScoreDetailView";
 import "./ScorePanel.css";
 
 interface ScorePanelProps {
@@ -16,21 +22,15 @@ const ScorePanel = ({
   return (
     <div className="score-container">
       <div className="score-header">
-        <h3>{headerText || "My Items"}</h3>
+        <h2>{headerText || ScorePanelDefaultHeading}</h2>
       </div>
-      <div className="score-detail-view">
-        {items?.map((item, index) => {
-          return (
-            <div className="item-row" key={index}>
-              {item.label+"-"+item.collectCount+"-"+item.itemScore}
-            </div>
-          );
-        })}
-      </div>
+      <ScoreDetailView items={items} />
       <div className="score-footer">
-        <div className="score-bonus">{score?.bonus || 0}</div>
-        <div className="score-total">{score?.total || 0}</div>
-        <button className="btn-new-game" onClick={onNewGame}>
+        <div>{ScoreBonusLabel}</div>
+        <data>{score?.bonus || 0}</data>
+        <div>{ScoreTotalLabel}</div>
+        <data>{score?.total || 0}</data>
+        <button type="reset" onClick={onNewGame}>
           {"NEW GAME"}
         </button>
       </div>
