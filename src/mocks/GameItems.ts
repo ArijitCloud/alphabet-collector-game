@@ -1,4 +1,6 @@
-export default function GameItems() {
+import { GameItem } from "../types";
+
+export default function GameItems():GameItem[] {
   return [
     {
       label: "A",
