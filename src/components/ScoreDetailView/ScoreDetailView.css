@@ -1,0 +1,22 @@
+.score-detail-view {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--score-font-size);
+}
+
+.score-detail-view .header {
+  font-weight: bold;
+  border-bottom: var(--border-style);
+}
+
+.score-detail-view .body{
+    overflow-y: scroll;
+    min-height: 50vh;
+}
+
+.score-detail-view .header,
+.score-detail-view .item-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

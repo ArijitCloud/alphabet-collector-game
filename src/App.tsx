@@ -1,27 +1,27 @@
 import "./App.css";
+import useGamePointsReducer from "./common/useGamePointsReducer";
 import GamePanel from "./components/GamePanel/GamePanel";
 import ScorePanel from "./components/ScorePanel/ScorePanel";
-import GameItems from "./mocks/GameItems";
-import useItemScore from "./useItemScore";
+import { GameItem } from "./types";
 
 function App() {
-  // const onCollect = (item: GameItem) => {
-  // };
+  const { items, score, dispatch } = useGamePointsReducer();
+  
+  const onCollect = (item: GameItem) => {
+    dispatch({ type: "UPDATE_POINT", payload: item.label });
+  };
 
-  // const onNewGame = () => {};
-  const { allItems, totalScore, updateScore, resetScore } =
-    useItemScore(GameItems);
+  const onNewGame = () => {
+    dispatch({ type: "RESET_POINT" });
+  };
 
   return (
     <div className="main-container">
-      <GamePanel
-        items={allItems}
-        onCollect={(item) => updateScore(item.label)}
-      ></GamePanel>
+      <GamePanel items={items} onCollect={onCollect}></GamePanel>
       <ScorePanel
-        items={allItems}
-        score={totalScore}
-        onNewGame={resetScore}
+        items={items}
+        score={score}
+        onNewGame={onNewGame}
       ></ScorePanel>
     </div>
   );
