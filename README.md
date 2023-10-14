@@ -4,7 +4,7 @@ This project provides a minimal setup to get a small game of collecting alphabet
 
 ## TODO
 - add custom theming support later
-- write a blog about configuring Jest and RTL write a link here later
+- write a blog about configuring Jest and RTL attach a link here later
 
 
 ## Run the project
