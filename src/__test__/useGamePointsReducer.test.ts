@@ -1,4 +1,4 @@
-import useGamePointsReducer from "./useGamePointsReducer";
+import useGamePointsReducer from "../common/useGamePointsReducer";
 import { act, renderHook } from "@testing-library/react";
 
 describe("useGamePointsReducer", () => {

@@ -21,9 +21,8 @@ const ScorePanel = ({
   isOpen,
   onNewGame,
 }: ScorePanelProps) => {
-  console.log(isOpen);
   return (
-    <div className={`score-container ${isOpen?"open":""}`}>
+    <div className={`score-container ${isOpen ? "open" : ""}`}>
       <div className="score-header">
         <h2>{headerText || ScorePanelDefaultHeading}</h2>
       </div>
