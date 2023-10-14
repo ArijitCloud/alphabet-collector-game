@@ -2,6 +2,9 @@
 
 This project provides a minimal setup to get a small game of collecting alphabet for points.
 
+## TODO
+- add theming support
+
 
 ## Run the project
 - clone the source
