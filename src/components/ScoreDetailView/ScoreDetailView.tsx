@@ -11,7 +11,7 @@ const ScoreDetailView = ({ items }: ScoreDetailViewProps) => {
     <div className="score-detail-view">
       <div className="header">
         {ScoreDetailViewHeaderLabels.map((headerLabel, index) => (
-          <h4 key={index}>{headerLabel}</h4>
+          <h3 key={index}>{headerLabel}</h3>
         ))}
       </div>
       <div className="body">
