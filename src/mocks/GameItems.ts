@@ -1,6 +1,6 @@
 import { GameItem } from "../types";
 
-export default function GameItems():GameItem[] {
+export default function MockGameItems():GameItem[] {
   return [
     {
       label: "A",
