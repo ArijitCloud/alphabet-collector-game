@@ -1,5 +1,5 @@
 import { Reducer, useReducer } from "react";
-import GameItems from "../mocks/GameItems";
+import MockGameItems from "../mocks/GameItems";
 import { GameItem, GameItemsState, PointAction } from "../types";
 
 /**
@@ -75,7 +75,7 @@ const pointReducer = (state: GameItemsState, action: PointAction) => {
  * init reducer state with mock game items
  */
 const initItems = (): GameItemsState => ({
-  items: GameItems(),
+  items: MockGameItems(),
   score: {
     total: 0,
     bonus: 0,

@@ -3,8 +3,11 @@
 This project provides a minimal setup to get a small game of collecting alphabet for points.
 
 ## TODO
-- add custom theming support later
-- write a blog about configuring Jest and RTL attach a link here later
+- add custom theming support
+- add storybook
+- add animations
+- add demo
+- write a blog about configuring Jest and RTL.attach a link here
 
 
 ## Run the project
@@ -13,7 +16,13 @@ This project provides a minimal setup to get a small game of collecting alphabet
 - npm run dev
 
 ## Code structure
-- all the components used is in src/components folder
-- app.tsx used as integration point for this project
+Most of the codes are in src folder
+- src
+  - components - for react components
+  - common - for possible current and future shared codes
+  - types - arranging all the types used across files
+  - mocks - for mock data
+  - `App.tsx` - for integration of components
+  - `index.css` - for system theme support and global css var
 
 ## Demo
