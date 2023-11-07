@@ -26,8 +26,8 @@
 
 @media only screen and (min-width: 800px) {
   .panel-items button {
-    width: 10rem;
-    height: 10rem;
-    font-size: 4em;
+    width: 8rem;
+    height: 8rem;
+    font-size: 3em;
   }
 }

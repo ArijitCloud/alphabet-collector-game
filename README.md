@@ -5,7 +5,7 @@ This project provides a minimal setup to get a small game of collecting alphabet
 ## TODO
 - add custom theming support
 - add storybook
-- add animations
+- add timer
 - add demo
 - write a blog about configuring Jest and RTL.attach a link here
 
