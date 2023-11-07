@@ -1,4 +1,4 @@
-export const GamePanelDefaultHeading = "Kahoot! Points - Collect Items";
+export const GamePanelDefaultHeading = "Collect Alphabet to Score";
 export const ScorePanelDefaultHeading = "My Items";
 
 export const ScoreBonusLabel = "Bonus";
